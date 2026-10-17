@@ -2,6 +2,8 @@ backend:
   name: github
   repo: yurizin7kxx/prhair
   branch: main
+  base_url: https://decap-cms-oauth.vercel.app
+  auth_endpoint: /auth
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
