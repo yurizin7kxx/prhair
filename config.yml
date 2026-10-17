@@ -1,23 +1,20 @@
 backend:
-  name: git-gateway
-  branch: main # Altera para 'master' se a tua branch principal no GitHub for 'master'
+  name: github
+  repo: yurizin7kxx/prhair
+  branch: main
 
-media_folder: "images" # Pasta onde serão guardadas as imagens enviadas pelo painel
-public_folder: "/images"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "produtos"
     label: "Produtos"
-    folder: "conteudo/produtos" # Onde os dados dos produtos vão ficar gravados no projeto
+    folder: "conteudo/produtos"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Nome do Produto", name: "title", widget: "string"}
-      - {label: "Preço", name: "preco", widget: "string"}
-      - {label: "Categoria", name: "categoria", widget: "string"}
-      - {label: "Foto", name: "image", widget: "image"}
-
-      backend:
-  name: github
-  repo: yurizin7kxx/prhair
-  branch: main
+      - { label: "Nome do Produto", name: "title", widget: "string" }
+      - { label: "Preço", name: "preco", widget: "string" }
+      - { label: "Categoria", name: "categoria", widget: "string" }
+      - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Descrição", name: "body", widget: "markdown" }
