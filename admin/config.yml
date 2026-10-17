@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Altera para 'master' se a tua branch principal no GitHub for 'master'
+
+media_folder: "images" # Pasta onde serão guardadas as imagens enviadas pelo painel
+public_folder: "/images"
+
+collections:
+  - name: "produtos"
+    label: "Produtos"
+    folder: "conteudo/produtos" # Onde os dados dos produtos vão ficar gravados no projeto
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Nome do Produto", name: "title", widget: "string"}
+      - {label: "Preço", name: "preco", widget: "string"}
+      - {label: "Categoria", name: "categoria", widget: "string"}
+      - {label: "Foto", name: "image", widget: "image"}
