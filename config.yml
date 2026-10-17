@@ -16,3 +16,8 @@ collections:
       - {label: "Preço", name: "preco", widget: "string"}
       - {label: "Categoria", name: "categoria", widget: "string"}
       - {label: "Foto", name: "image", widget: "image"}
+
+      backend:
+  name: github
+  repo: yurizin7kxx/prhair
+  branch: main
